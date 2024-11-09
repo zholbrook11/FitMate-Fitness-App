@@ -1,18 +1,15 @@
-## Getting Started
+## FitMate
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+By: Zac Holbrook (zholbrook@oakland.edu)
 
-## Folder Structure
+Team Name: Team FitnessApp
 
-The workspace contains two folders by default, where:
+Project: This project is a prototype fitness app called FitMate, designed to help users track their workouts, monitor their diet, and set personal fitness goals. The aim is to build a simple yet functional tool that provides workout and dietary guidance, making it easier for users to stay on top of their fitness routine and maintain a healthy lifestyle.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+The app will be useful for individuals looking to manage their fitness goals in one place. By tracking workouts, monitoring calories, and getting advice, users can better understand and improve their health.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Users will interact with the app to input workouts, check diet recommendations, set and review fitness goals, and receive general advice for staying fit, making it a straightforward and supportive companion for anyone aiming to stay active and health-conscious.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Plan: I will first build the app with an emphasis on functionality, then proceed to add an asthetic GUI to tie everything together.
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Estimated effort requirement - 8/10
