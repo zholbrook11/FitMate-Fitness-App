@@ -13,3 +13,7 @@ Users will interact with the app to input workouts, check diet recommendations, 
 Plan: I will first build the app with an emphasis on functionality, then proceed to add an asthetic GUI to tie everything together.
 
 Estimated effort requirement - 8/10
+
+## How to use FitMate
+
+Once the app is launched, the user will be brought to the FitMate home screen. An 'About' section as well as an exit option can be seen in the top left corner to either read about the app or to exit the app. The user will be required to enter their profile details before proceeding to use any of the other features. Once their user has input their details, they gain access to all features of the app and can also view their profile details. 
