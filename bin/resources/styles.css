@@ -1,0 +1,94 @@
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-background-color: #F4F4F4;
+}
+
+.welcome-label {
+    -fx-font-size: 100px;
+    -fx-text-fill: #ea0b0b;
+    -fx-font-family: 'Copperplate', serif;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, white, 1, 1, 0, 0);
+}
+
+.button {
+    -fx-background-color: linear-gradient(#ffffff, #ffffff);
+    -fx-text-fill: rgb(11, 11, 11);
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 300px;
+    -fx-pref-height: 70px;
+}
+
+#userProfileBtn {
+    -fx-background-image: url("/resources/user.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 40px;
+}
+
+#bmiBtn {
+    -fx-background-image: url("/resources/bmi.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 40px;
+}
+
+#calorieBtn {
+    -fx-background-image: url("/resources/calories.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 40px;
+}
+
+#dietPlanBtn {
+    -fx-background-image: url("/resources/diet.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 40px;
+}
+
+#exerciseListBtn {
+    -fx-background-image: url("/resources/dumbell.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 40px;
+}
+
+#goalTrackerBtn {
+    -fx-background-image: url("/resources/goals.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 40px;
+}
+#workoutPlanBtn {
+    -fx-background-image: url("/resources/workout.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left center;
+    -fx-background-size: 40px;
+}
+
+.dialog-pane {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5;
+    -fx-background-image: url("/resources/gym_background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+.menu-item {
+    -fx-padding: 5 5 80 5
+}
+
+.alert {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #4A90E2;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5;
+    -fx-background-image: url("/resources/alert.png");
+    -fx-background-position: top left;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: 32px;
+}

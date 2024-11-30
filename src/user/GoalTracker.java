@@ -1,38 +1,72 @@
 package user;
 
 import interfaces.Trackable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
+import javafx.scene.control.ListView;
+import javafx.scene.control.TextInputDialog;
+import javafx.scene.layout.VBox;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class GoalTracker implements Trackable {
-    public int weightGoal;
-    public int workoutGoal;
+    private UserProfile userProfile;
+    private ObservableList<CheckBox> goalList;
+    private ListView<CheckBox> goalListView;  
 
-    public GoalTracker() {
-        // Default constructor
+    public GoalTracker(UserProfile userProfile) {
+        this.userProfile = userProfile;
+        this.goalList = FXCollections.observableArrayList();
+        this.goalListView = new ListView<>(goalList);  
     }
 
-    public GoalTracker(int weightGoal) {
-        this.weightGoal = weightGoal;
+    public void addGoal(String goalText) {
+        CheckBox goalCheckBox = new CheckBox(goalText);
+        goalList.add(goalCheckBox);
     }
 
-    public void updateGoal() {
-        // Update goal logic
+    public void clearGoals() {
+        goalList.clear();
     }
 
-    public void displayGoal() {
-        // Display goal
-    }
+    public void showGoalTracker(Stage primaryStage) {
+        VBox vbox = new VBox(10);
 
-    public final void resetGoal() {
-        // Reset goal to default
+        Button addGoalButton = new Button("Add Goal");
+        addGoalButton.setOnAction(event -> {
+            TextInputDialog dialog = new TextInputDialog();
+            dialog.setTitle("New Goal");
+            dialog.setHeaderText("Enter your new fitness goal:");
+            dialog.setContentText("Goal:");
+
+            dialog.showAndWait().ifPresent(goalText -> {
+                if (!goalText.isEmpty()) {
+                    addGoal(goalText);
+                }
+            });
+        });
+
+        Button clearGoalsButton = new Button("Clear Goals");
+        clearGoalsButton.setOnAction(event -> clearGoals());
+
+        vbox.getChildren().addAll(goalListView, addGoalButton, clearGoalsButton);
+
+        Scene scene = new Scene(vbox, 400, 400);
+        primaryStage.setTitle("Your Goals");
+        primaryStage.setScene(scene);
+        primaryStage.show();
     }
 
     @Override
     public void calculateProgress() {
-        // Track progress
     }
-
     @Override
     public void resetProgress() {
-        // Reset progress
+        for (CheckBox goal : goalList) {
+            goal.setSelected(false);
+        }
     }
+    
 }

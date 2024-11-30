@@ -4,6 +4,7 @@ import user.UserProfile;
 
 public class BMICalculator extends HealthMetrics {
     private double bmi;
+    private UserProfile userProfile;
 
     public BMICalculator() {
         // Default constructor
@@ -11,30 +12,38 @@ public class BMICalculator extends HealthMetrics {
 
     public BMICalculator(UserProfile userProfile) {
         // Constructor with user profile
+        this.userProfile = userProfile;
     }
 
     public static double calculateBMI(double weight, double height) {
-        // Calculate BMI
-        return 0.0;
+        if (height <= 0) return 0.0;
+        
+        double heightInchesSquared = height * height;
+
+        return 703 * (weight/heightInchesSquared);
     }
+    
 
     public static double calculateBMI(double weight, double height, int age) {
-        // Calculate BMI with age
-        return 0.0;
+        // Simplified BMI calculation ignoring age for demonstration
+        return calculateBMI(weight, height);
     }
 
     protected void displayBMI() {
-        // Display BMI
+        System.out.printf("BMI: %.2f\n", bmi);
     }
 
     @Override
     public void calculate() {
-        // Perform BMI calculation
+        // Perform BMI calculation using user profile data
+        if (userProfile != null) {
+            bmi = calculateBMI(userProfile.getWeight(), userProfile.getHeight());
+        }
     }
 
     @Override
     public void display() {
-        // Display BMI result or details
-        System.out.println("Displaying BMI details...");
+        // Display BMI result
+        displayBMI();
     }
 }

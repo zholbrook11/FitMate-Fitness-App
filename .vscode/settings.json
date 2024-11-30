@@ -2,6 +2,14 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
-        "lib/**/*.jar"
+        "lib/**/*.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx-swt.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx.base.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx.controls.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx.fxml.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx.graphics.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx.media.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx.swing.jar",
+        "/Users/zacholbrook/Documents/JavaCSI2300/javafx/lib/javafx.web.jar"
     ]
 }
