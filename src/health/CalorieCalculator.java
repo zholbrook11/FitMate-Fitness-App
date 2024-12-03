@@ -10,17 +10,16 @@ public class CalorieCalculator extends HealthMetrics {
         this.userProfile = userProfile;
     }
 
-    // Calculate BMR for men using Mifflin-St Jeor Equation
+    // men
     private static int calculateBMRForMen(int age, double weight, double height) {
         return (int) ((10 * weight) + (6.25 * height) - (5 * age) + 5);
     }
 
-    // Calculate BMR for women using Mifflin-St Jeor Equation
+    // women
     private static int calculateBMRForWomen(int age, double weight, double height) {
         return (int) ((10 * weight) + (6.25 * height) - (5 * age) - 161);
     }
 
-    // Calculate TDEE based on BMR and activity level
     private static int calculateTDEE(int bmr, String activityLevel) {
         double activityFactor;
         switch (activityLevel.toLowerCase()) {
@@ -46,7 +45,6 @@ public class CalorieCalculator extends HealthMetrics {
         return (int) (bmr * activityFactor);
     }
 
-    // Calculate maintenance calories using the user profile
     public void calculateCalories() {
         if (userProfile != null) {
             double weightInPounds = userProfile.getWeight();
@@ -59,19 +57,17 @@ public class CalorieCalculator extends HealthMetrics {
                 bmr = calculateBMRForWomen(userProfile.getAge(), weightInPounds, heightInInches);
             }
 
-            // Calculate TDEE using the activity level from the user profile
             maintenanceCalories = calculateTDEE(bmr, userProfile.getActivityLevel());
         }
     }
 
-    // Method to get the calculated maintenance calories
     public int getMaintenanceCalories() {
         return maintenanceCalories;
     }
 
     @Override
     public void calculate() {
-        calculateCalories(); // Perform calorie calculation using user profile data
+        calculateCalories();
     }
 
     @Override
